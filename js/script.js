@@ -1,4 +1,4 @@
-// console.log("Olá mundo!")
+/* // console.log("Olá mundo!")
 // document.getElementById("botao")
 
 // console.log(document.getElementById("botao").innerHTML)
@@ -8,4 +8,14 @@ const btnElemento = document.getElementById("botao");
 // Atrelar ao botão um evento de click.
 btnElemento.addEventListener("click",function(){
     console.log("Botão clicado")
-});
+}); */
+
+// Hoisting
+let nome = "Cleiton";
+ console.log(nome);
+
+ if(true){
+    let nome = "José";
+ }
+
+ console.log(nome);
