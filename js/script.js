@@ -9,3 +9,12 @@
 //    console.log('Botão clicado');
 // })
 
+//Hoisting
+//var nome = "Cleiton";
+ //console.log(nome);
+ 
+ //if(true){
+ //   let nome = "José";
+// }
+
+ //console.log(nome);
