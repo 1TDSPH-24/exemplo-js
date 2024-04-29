@@ -1,10 +1,23 @@
 
 // console.log("Olá Mundo!");
 
-// console.log(document.getElementById("botao").innerText);
+// console.log(document.getElementById("botao").innerHTML);
 
-const btnElemento = document.getElementById("botao");
+//Recuperando o botão do HTML e colocando em uma constante.
+// const btnElemento = document.getElementById("botao");
+// //Atrelar ao botão um evento de click.
+// btnElemento.addEventListener("click",function () {
+//     console.log("Botão clicado!");
+// });
 
-btnElemento.addEventListener("click",function(){
-    console.log("botao clickado top 10")
-});
+//Hoisting
+var nome = "Cleiton";
+ console.log(nome);
+ 
+ if(true){
+    var nome = "José";
+ }
+
+ console.log(nome);
+
+ 
