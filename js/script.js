@@ -18,3 +18,11 @@
 // }
 
 // console.log(nome);
+
+const elTexto = document.getElementById("texto")
+
+console.log(elTexto.innerText);
+console.log(elTexto.innerText.indexOf("ipsum"));
+console.log(elTexto.innerText.lastIndexOf("ipsum"));
+
+const ulElemento = document.querySelector
