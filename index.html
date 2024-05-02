@@ -8,9 +8,8 @@
     <title>JavaScript</title>
 
 </head>
-
 <body>
-    
+    <div class="container">
     <header id="topo">
         <h1 id="titulo">JavaScript</h1>
         <nav>
@@ -20,8 +19,43 @@
                 <li class="link"><a href="#">C#</a></li>
             </ul>
         </nav>
-        <button style="width: 250px; height: 250px;" id="butao">butao</button>
+        <button id="butao">butao</button>
     </header>
-       <script src="./js/script.js" defer></script>   
+    <ul class="lista">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+    </ul>
+
+    <div>
+        <h2>VALIDAÇÃO</h2>
+        <div>
+            <form action="#" method="post" onsubmit= "return false " >
+                <fieldset>
+                    <legend>LOGIN</legend>
+                    <div>
+                        <label for="idEmail">Email</label>
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                    </div>
+                    <div>
+                        <label for="idSenha">Senha</label>
+                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                        <label for="idLembrar">Lembrar-me</label>
+                    </div>
+                    <div>
+                        <button type="submit" id="btnSubmit">Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+       <script src="./js/script.js" defer></script>
+    </div>
 </body>                     
 </html>

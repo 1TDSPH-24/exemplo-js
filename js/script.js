@@ -23,4 +23,12 @@
 //  console.log(nome);
 
 
+const botao = document.querySelector("#btnSubmit");
 
+botao.addEventListener("click", function(e){
+    e.preventDefault();
+    const inputEmail = document.querySelector("#idEmail");
+    const inputSenha = document.querySelector("#idSenha");
+    console.log(inputEmail.value)
+    console.log(inputSenha.value)
+})
