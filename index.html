@@ -6,23 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>JavaScript</title>
+
     <script src="./js/script.js" defer></script>
 
-    
-
-    <!--<script>
-        /*Comentario de linha
-        /* comentaria de
-        varias 
-        linhas 
-        var nome = "jose"; // Declaração de variavel com valor
-        let idade = 25; // Declaração de variavel com valor
-        const altura = 1.70;//declarção de constante com valor
-        console.log(nome + "tem " + idade + "anos e mede " + altura + "m.");//impressao de tela do navegador
-
-        nome = 100
-        console.log (`Novo valor da variável ${nome}`) */
-    </script> -->
 </head>
 
 <body>
@@ -38,8 +24,41 @@
         </nav>
     </header> 
 
-    <button id="botao">testar botão</button>
+    <button id="botao">Testar botão</button>
 
+<ul class="menu" id="lista">
+    <li>Item-1</li>
+    <li>Item-2</li>
+    <li>Item-3</li>
+    <li>Item-4</li>
+    <li>Item-5</li>
+</ul>
+    
+<div>
+    <h2>VALIDAÇÃO</h2>
+    <div>
+        <form action="#" method="post" onsubmit="return false">
+            <fieldset>
+                <legend>LOGIN</legend>
+                <div>
+                    <label for="idEmail">Email</label>
+                    <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                </div>
+                <div>
+                    <label for="idSenha">Senha</label>
+                    <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                </div>
+                <div>
+                    <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                    <label for="idLembrar">Lembrar-me</label>
+                </div>
+                <div>
+                    <button type="submit" id="btnSubmit">Enviar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
     
 </body>                     
 </html>
