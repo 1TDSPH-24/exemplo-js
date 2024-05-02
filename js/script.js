@@ -1,9 +1,26 @@
+
 //^w^        :3           ><           >.<          >w<           OwO           UwU
 
-// console.log(document.getElementById("butao"))
+// console.log("Olá Mundo!");
 
-const btnElemento = document.getElementById("butao");
+// console.log(document.getElementById("botao").innerHTML);
 
-btnElemento.addEventListener("click", function(){
-    console.log("butao clicado");
-})
+//Recuperando o botão do HTML e colocando em uma constante.
+// const btnElemento = document.getElementById("botao");
+// //Atrelar ao botão um evento de click.
+// btnElemento.addEventListener("click",function () {
+//     console.log("Botão clicado!");
+// });
+
+//Hoisting
+// var nome = "Cleiton";
+//  console.log(nome);
+ 
+//  if(true){
+//     let nome = "José";
+//  }
+
+//  console.log(nome);
+
+
+
