@@ -151,9 +151,21 @@
 //     console.log(inputSenha.value)
 // })
 
-function tradicional(a,b){
+function validar(){
 
 // pegando o elemento input
-    const inputEmail = document.getElementById("idEmail");
-    console.log(inputEmail);
+const inputEmail = document.getElementById("idEmail").value;
+console.log(inputEmail)
+
+const inputSenha = document.getElementById("idSenha").value;
+console.log(inputSenha)
+
+if(inputEmail == "gustavo@gmail.com" && inputSenha == "123"){
+    window.location.href = "../sucesso.html"
+}
+else{
+    window.location.href = "../erro.html"
+}
+
+return false;
 }
