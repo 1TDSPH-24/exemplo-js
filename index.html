@@ -23,7 +23,41 @@
         </nav>
     </header> 
     
-    <button id="botao">Testar botão</button>
+    <div>
+        <h2>VALIDAÇÃO</h2>
+        <div>
+            <span class="valida"></span>
+        </div>
+        <div>
+            <!--tudo que vem depois de "?" na URL é parâmetro, e o que vem antes da interrogação é o action do form
+            ex: 127.0.0.1:5500/index.php?txtEmail=ale...
+            index.php = action
+            txtEmail... = parâmetro
+            OBS: isso acontece somente quando usamos o 'method' get ao invés do post -->
+
+            <form action="./index.html" method="get" onsubmit="return validar()"> <!--todo formulário tem que ter um action-->
+                <!--"onsubmit" está ligado com o botão se estiver recebendo false ele não envia, se estiver recebendo true ele envia-->
+                <fieldset>
+                    <legend>LOGIN</legend>
+                    <div>
+                        <label for="idEmail">Email</label>
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                    </div>
+                    <div>
+                        <label for="idSenha">Senha</label>
+                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                        <label for="idLembrar">Lembrar-me</label>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 
     
 </body>                     

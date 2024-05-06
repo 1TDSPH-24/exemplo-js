@@ -3,4 +3,12 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
+  #selector-id{
+    color: black;
+  }
+
+  .selector-class{
+    color: black;
+  }
+
