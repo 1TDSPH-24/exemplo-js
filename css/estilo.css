@@ -12,3 +12,8 @@
 .seletor-class{
   color: black;
 }
+
+
+label[for=idEmail]{
+  
+}
