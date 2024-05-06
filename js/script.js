@@ -139,16 +139,25 @@
 //INICIAR UM SISTEMA DE VALIDAÇÃO
 
 //Recuperando o botão de submit do Formulário
-const botaoSubmit = document.querySelector("#btnSubmit");
+// const botaoSubmit = document.querySelector("#btnSubmit");
 
-//Adicionar um evento ao botão quando ocorrer.
-botaoSubmit.addEventListener("click", function(e){
-    //Recuperando os campos do formulário para validação!
-    e.preventDefault();  //Evita que o formulário seja enviado
-    const inputEmail = document.querySelector("#idEmail");
-    const inputSenha = document.querySelector("#idSenha");
-    console.log(inputEmail.value)
-    console.log(inputSenha.value)
-})
+// //Adicionar um evento ao botão quando ocorrer.
+// botaoSubmit.addEventListener("click", function(e){
+//     //Recuperando os campos do formulário para validação!
+//     e.preventDefault();  //Evita que o formulário seja enviado
+//     const inputEmail = document.querySelector("#idEmail");
+//     const inputSenha = document.querySelector("#idSenha");
+//     console.log(inputEmail.value)
+//     console.log(inputSenha.value)
+// })
 
-
+function tradicional(a,b){
+    if((a+b) > 10){
+        alert("Você clicou no botao tradicao");
+        return true;
+    }
+    else{
+        alert("Inválido");
+        return false;
+    }
+}
