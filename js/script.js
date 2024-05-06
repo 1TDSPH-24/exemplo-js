@@ -139,6 +139,7 @@
 //INICIAR UM SISTEMA DE VALIDAÇÃO
 
 //Recuperando o botão de submit do Formulário
+/*
 const botaoSubmit = document.querySelector("#btnSubmit");
 
 //Adicionar um evento ao botão quando ocorrer.
@@ -150,5 +151,31 @@ botaoSubmit.addEventListener("click", function(e){
     console.log(inputEmail.value)
     console.log(inputSenha.value)
 })
+*/
 
+function validar() {
+/*
+    if((a+b) > 10) {
+        return false
+    }else {
+        return true
+    }
+*/
 
+    const inputEmail = document.getElementById("idEmail").value;
+    const inputSenha = document.getElementById("idSenha").value;
+
+    if (inputEmail == "andre.luismesquita@hotmail.com" & inputSenha == "1234") {
+        window.location.href = "../sucesso.html"
+    } else {
+        window.location.href = "../erro.html"
+    }
+
+    return false
+
+}
+
+/*
+const inputEmail = document.getElementById("idEmail")
+const inputLabel = document.querySelector("label[for=idEmail]")
+*/
