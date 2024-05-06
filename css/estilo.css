@@ -4,3 +4,13 @@
     box-sizing: border-box;
   }
   
+
+  #seletor-id{
+    color: black;
+  }
+
+  .seletor-class{
+    color: black;
+  }
+
+  

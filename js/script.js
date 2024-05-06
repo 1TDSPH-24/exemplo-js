@@ -139,8 +139,7 @@
 //INICIAR UM SISTEMA DE VALIDAÇÃO
 
 //Recuperando o botão de submit do Formulário
-
-/*const botaoSubmit = document.querySelector("#btnSubmit");
+const botaoSubmit = document.querySelector("#btnSubmit");
 
 //Adicionar um evento ao botão quando ocorrer.
 botaoSubmit.addEventListener("click", function(e){
@@ -151,9 +150,5 @@ botaoSubmit.addEventListener("click", function(e){
     console.log(inputEmail.value)
     console.log(inputSenha.value)
 })
-*/
 
-function tradicional(e){
-   e.prevent.default 
-    return true
-}
+

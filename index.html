@@ -6,21 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>JavaScript</title>
+
     <script src="./js/script.js" defer></script>
-<!-- 
-    <script>
-        //Comentário de linha
-         /*
-          Comentário 
-          de
-           várias 
-          linhas 
-        */
-        var nome = "José"; //Declaração de variável com valor
-        let  idade = 25;   //Declaração de variável com valor
-        const altura = 1.70;//Declaração de constante com valor
-        console.log(nome + " tem " +idade+ " anos e mede "+altura+"m.");//Impressão na tela do navegador
-    </script> -->
+
 </head>
 
 <body>
@@ -35,6 +23,36 @@
             </ul>
         </nav>
     </header> 
-    <button id="botao">Clique aqui</button>
+
+    <div>
+        <h2>VALIDAÇÃO</h2>
+        <div>
+            <span class="valida"></span>
+        </div>
+        <div>
+            <form action="index.php" method="post">
+                <fieldset>
+                    <legend>LOGIN</legend>
+                    <div>
+                        <label for="idEmail">Email</label>
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                    </div>
+                    <div>
+                        <label for="idSenha">Senha</label>
+                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                        <label for="idLembrar">Lembrar-me</label>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+    
 </body>                     
 </html>
