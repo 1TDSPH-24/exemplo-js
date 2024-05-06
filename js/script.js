@@ -142,13 +142,52 @@
 const botaoSubmit = document.querySelector("#btnSubmit");
 
 //Adicionar um evento ao botão quando ocorrer.
-botaoSubmit.addEventListener("click", function(e){
+//botaoSubmit.addEventListener("click", function(e){
     //Recuperando os campos do formulário para validação!
-    e.preventDefault();  //Evita que o formulário seja enviado
-    const inputEmail = document.querySelector("#idEmail");
-    const inputSenha = document.querySelector("#idSenha");
-    console.log(inputEmail.value)
-    console.log(inputSenha.value)
-})
+   // e.preventDefault();  //Evita que o formulário seja enviado
+   // const inputEmail = document.querySelector("#idEmail");
+   // const inputSenha = document.querySelector("#idSenha");
+   // console.log(inputEmail.value)
+   // console.log(inputSenha.value)
+//}
 
 
+function validar(){
+
+    //if((a+b)> 10) {
+    //    alert('Você clicou no botão tradição');
+    //    return true;
+    //} else {
+    //    alert('Inválido');
+    //    return false;
+    //}
+
+    // Pegando o elemento input
+    
+    //const inputLabel = document.querySelector("label[for-idEmails")
+
+    //Adicionar dados no innerText
+    // // inputLabel.innerText = '<p>Digite seu Email</p>';
+    // inputLabel.innerHTML = '<p>Digite seu Email</p>';
+
+    // console.log("INNER HTML : " + inputLabel.innerHTML);
+    // console.log("INNER TEXT : " + inputLabel.innerText);
+
+
+    const inputEmail = document.getElementById("idEmail").value;
+    console.log(inputEmail);
+
+    const inputSenha = document.getElementById("idSenha").value;
+    console.log(inputSenha);
+
+    if(inputEmail == "dudabrigidio@gmail.com" && inputSenha == "123456"){
+        //Redirect 
+        window.location.href = "../sucesso.html";
+    } else {
+        //Redirect 
+        window.location.href = "../erro.html";
+    }
+
+
+    return false;
+}
