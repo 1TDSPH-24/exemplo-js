@@ -152,12 +152,8 @@
 // })
 
 function tradicional(a,b){
-    if((a+b) > 10){
-        alert("Você clicou no botao tradicao");
-        return true;
-    }
-    else{
-        alert("Inválido");
-        return false;
-    }
+
+// pegando o elemento input
+    const inputEmail = document.getElementById("idEmail");
+    console.log(inputEmail);
 }
