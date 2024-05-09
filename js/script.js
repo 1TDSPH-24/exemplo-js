@@ -150,46 +150,77 @@
 //     console.log(inputEmail.value)
 //     console.log(inputSenha.value)
 // })
-const inputEmail = document.getElementById("idEmail");
-console.log(inputEmail);
-
-function tradicional(){
-
-// if((a+b)>10){
-//     alert('Validado');
-//     return true;
-//     }
-// else{
-//     alert('Inválidado');
-//     return false;
-// }
-// }
-
-//Pegando o elemento input
 
 
+function validar(inputEmail,inputSenha){
 
-    //Adicionar dados no innertText
-    // inputLabel.innerText = '<p>Digite seu Email</p>';
-    // inputLabel.innerHTML = '<p>Digite seu Email</p>';
+    // const inputEmail = document.getElementById("idEmail").value;
+    console.log(inputEmail.value);
 
-    // console.log("INNER HTML : " + inputLabel.innerHTML);
-    // console.log(inputLabel.innerText);
+    // const inputSenha = document.getElementById("idSenha").value;
+    console.log(inputSenha.value);
 
-    const inputEmail = document.getElementById("idEmail").value;
-    console.log(inputEmail);
-
-    const inputSenha = document.getElementById("idSenha").value;
-    console.log(inputSenha);
-
-
-    if(inputEmail == "ale@gmail.com" && inputSenha == "123456"){
+    if(inputEmail.value == "ale@email.com" && inputSenha.value == "123456"){
         //Redirect
-        window.location.href="../successo.html"
+        window.location.href = "../sucesso.html";
     }else{
-        window.location.href="../erro.html"
+        //Redirect
+        window.location.href = "../erro.html";
     }
-
-    return false;   
-
+    return false;
 }
+
+
+
+//EXERCÍCIOS
+
+// Exercício 1 - Variáveis e Hoisting:
+// Qual será o valor de nome após a execução do código abaixo?
+// "use strict";
+// var nome = "Joaquim";
+// if (true) {
+//     let nome = "João";
+// }
+// console.log(nome);
+
+// Exercício 2 - Declaração de Variáveis:
+// Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+
+// Exercício 3 - Tipos de Dados:
+// Qual é o tipo de dado da variável str?
+// let str = "Olá, mundo!";
+
+
+// Exercício 4 - Mesclar Arrays:
+// Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2 dos exemplos passados. Imprima arrConcatenado no console.
+
+// Exercício 5 - Acesso a Propriedades de Objetos:
+// Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+// let obj = { nome: "João", idade: 25, devedor: true };
+
+// Exercício 6 - Atributo Variável de Objetos:
+// Atribua a string "São Paulo" à propriedade cidade do objeto obj da questão 5. Imprima o obj no console.
+
+
+// Exercício 7 - Conversão de String para Número:
+// Converta a string "10" em um número e imprima o resultado no console.
+
+// Exercício 8 - Estrutura Condicional com Operadores:
+// Qual será a saída do código abaixo?
+// let idade = 20;
+// let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+// console.log(result);
+
+// Exercício 9 - Estrutura Condicional Tradicional:
+// Qual será a saída do código abaixo?
+// let age = 20;
+// if (age >= 18) {
+//     console.log("Maior de idade");
+// } else {
+//     console.log("Menor de idade");
+// }
+
+// Exercício 10 - Mesclar Arrays com Spread:
+// Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 dos exemplospassados e utilizando o operador spread. Imprima arr4 no console.
+
+    
