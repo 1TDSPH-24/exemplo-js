@@ -195,6 +195,10 @@ let listaUsuario = [
         //Redirect
           msgStatus.setAttribute("class","sucesso");
           msgStatus.innerText = "Login realizado com sucesso!";
+  
+          //Guardando o objeto validado no localStorage:
+          localStorage.setItem("usuario-logado", JSON.stringify(listaUsuario[x]));
+          
           setTimeout(function(){
               msgStatus.setAttribute("class","valida");
               msgStatus.innerText = "";
