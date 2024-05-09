@@ -181,21 +181,29 @@ let listaUsuario = [
   
   function validar(inputEmail, inputSenha) {
   
-    listaUsuario.forEach(function(usuario) {
+//Recuperar elemento de msgStatus
+let msgStatus = document.querySelector(".valida");
+
+for (let x = 0; x < listaUsuario.length; x++) {
     
-      if ((inputEmail.value == usuario.emailUsuario) && (inputSenha.value == usuario.senhaUsuario)) {
-        //Redirect
-        console.log("Login realizado com sucesso!");
-        window.location.href = "../sucesso.html";
+    if ((inputEmail.value == listaUsuario[x].emailUsuario) && (inputSenha.value == listaUsuario[x].senhaUsuario)) {
+      //Redirect
+        msgStatus.setAttribute("class","sucesso");
+        msgStatus.innerText = "Login realizado com sucesso!";
+        setTimeout(function(){
+            msgStatus.setAttribute("class","valida");
+            msgStatus.innerText = "";
+            window.location.href = "../sucesso.html";
+        }, 3000);
         return false;
-      }
-      console.log(inputEmail.value)
-      console.log(usuario.emailUsuario)
-      console.log(inputSenha.value)
-      console.log(usuario.senhaUsuario)
-  });
-  
-      console.log("Login ou senha invalidos!");
-      window.location.href = "../erro.html";
-      return false;
-  }
+    }
+}
+    msgStatus.setAttribute("class","erro");
+    msgStatus.innerText = "Login ou senha invalidos!";
+    setTimeout(function(){
+        msgStatus.setAttribute("class","valida");
+        msgStatus.innerText = "";
+        window.location.href = "../erro.html";
+    }, 3000);
+    return false;
+}
