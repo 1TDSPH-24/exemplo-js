@@ -1,4 +1,3 @@
-
 // console.log("Olá Mundo!");
 
 // console.log(document.getElementById("botao").innerHTML);
@@ -13,7 +12,7 @@
 //Hoisting
 // var nome = "Cleiton";
 //  console.log(nome);
- 
+
 //  if(true){
 //     let nome = "José";
 //  }
@@ -99,7 +98,7 @@
 //   console.log(`Indice = ${i} - Valor = ${arr1[i]}` );
 // }
 
-//Imprindo o array com forOf 
+//Imprindo o array com forOf
 // for (const valor of arr1) {
 //   console.log(valor);
 // }
@@ -151,26 +150,60 @@
 //     console.log(inputSenha.value)
 // })
 
+// let usuario = {
+//     nomeCompleto: "Jose das Couves",
+//     emailUsuario: "jo@email.com",
+//     senhaUsuario: "123456"
+// }
 
-function validar(inputEmail,inputSenha){
+let listaUsuario = [
+  {
+    nomeCompleto: "Jose da Silva",
+    emailUsuario: "jo@email.com",
+    senhaUsuario: "123456",
+  },
+  {
+    nomeCompleto: "Joao Antonio",
+    emailUsuario: "an@email.com",
+    senhaUsuario: "123456",
+  },
+  {
+    nomeCompleto: "Marco Antonio",
+    emailUsuario: "ma@email.com",
+    senhaUsuario: "123456",
+  },
+  {
+    nomeCompleto: "Carlos Silva",
+    emailUsuario: "ca@email.com",
+    senhaUsuario: "123456",
+  },
+  {
+    nomeCompleto: "Luis Claudio",
+    emailUsuario: "lc@email.com",
+    senhaUsuario: "123456",
+  },
+];
 
-    // const inputEmail = document.getElementById("idEmail").value;
-    console.log(inputEmail.value);
+function validar(inputEmail, inputSenha) {
 
-    // const inputSenha = document.getElementById("idSenha").value;
-    console.log(inputSenha.value);
-
-    if(inputEmail.value == "ale@email.com" && inputSenha.value == "123456"){
-        //Redirect
-        window.location.href = "../sucesso.html";
-    }else{
-        //Redirect
-        window.location.href = "../erro.html";
+  listaUsuario.forEach(function(usuario) {
+  
+    if ((inputEmail.value == usuario.emailUsuario) && (inputSenha.value == usuario.senhaUsuario)) {
+      //Redirect
+      console.log("Login realizado com sucesso!");
+      window.location.href = "../sucesso.html";
+      return false;
     }
+    console.log(inputEmail.value)
+    console.log(usuario.emailUsuario)
+    console.log(inputSenha.value)
+    console.log(usuario.senhaUsuario)
+});
+
+    console.log("Login ou senha invalidos!");
+    window.location.href = "../erro.html";
     return false;
 }
-
-
 
 //EXERCÍCIOS
 
@@ -190,7 +223,6 @@ function validar(inputEmail,inputSenha){
 // Qual é o tipo de dado da variável str?
 // let str = "Olá, mundo!";
 
-
 // Exercício 4 - Mesclar Arrays:
 // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2 dos exemplos passados. Imprima arrConcatenado no console.
 
@@ -200,7 +232,6 @@ function validar(inputEmail,inputSenha){
 
 // Exercício 6 - Atributo Variável de Objetos:
 // Atribua a string "São Paulo" à propriedade cidade do objeto obj da questão 5. Imprima o obj no console.
-
 
 // Exercício 7 - Conversão de String para Número:
 // Converta a string "10" em um número e imprima o resultado no console.
@@ -222,4 +253,3 @@ function validar(inputEmail,inputSenha){
 
 // Exercício 10 - Mesclar Arrays com Spread:
 // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 dos exemplospassados e utilizando o operador spread. Imprima arr4 no console.
-
