@@ -151,21 +151,51 @@
 //     console.log(inputSenha.value)
 // })
 
-function validar(){
-
-// pegando o elemento input
-const inputEmail = document.getElementById("idEmail").value;
-console.log(inputEmail)
-
-const inputSenha = document.getElementById("idSenha").value;
-console.log(inputSenha)
-
-if(inputEmail == "gustavo@gmail.com" && inputSenha == "123"){
-    window.location.href = "../sucesso.html"
-}
-else{
-    window.location.href = "../erro.html"
-}
-
-return false;
-}
+let listaUsuario = [
+    {
+      nomeCompleto: "Jose da Silva",
+      emailUsuario: "jo@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Joao Antonio",
+      emailUsuario: "an@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Marco Antonio",
+      emailUsuario: "ma@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Carlos Silva",
+      emailUsuario: "ca@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Luis Claudio",
+      emailUsuario: "lc@email.com",
+      senhaUsuario: "123456",
+    },
+  ];
+  
+  function validar(inputEmail, inputSenha) {
+  
+    listaUsuario.forEach(function(usuario) {
+    
+      if ((inputEmail.value == usuario.emailUsuario) && (inputSenha.value == usuario.senhaUsuario)) {
+        //Redirect
+        console.log("Login realizado com sucesso!");
+        window.location.href = "../sucesso.html";
+        return false;
+      }
+      console.log(inputEmail.value)
+      console.log(usuario.emailUsuario)
+      console.log(inputSenha.value)
+      console.log(usuario.senhaUsuario)
+  });
+  
+      console.log("Login ou senha invalidos!");
+      window.location.href = "../erro.html";
+      return false;
+  }
