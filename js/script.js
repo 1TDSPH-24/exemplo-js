@@ -1,26 +1,23 @@
-// console.log("Olá Mundo!"); --para comentar CTRL + ;
+// console.log("Olá Mundo!");
 
-// console.log(document.getElementById("botao").innerText);
+// console.log(document.getElementById("botao").innerHTML);
 
 //Recuperando o botão do HTML e colocando em uma constante.
-//const btnElemento = document.getElementById("botao")
-//Atrelar ao botão um evento de click.
-//btnElemento.addEventListener( "click", function() {
-//    console.log("Botão clicando");
-//});
-//CRTL + ESPAÇO --> mostra as opções se deixar selecionada algum elemento
-
+// const btnElemento = document.getElementById("botao");
+// //Atrelar ao botão um evento de click.
+// btnElemento.addEventListener("click",function () {
+//     console.log("Botão clicado!");
+// });
 
 //Hoisting
-
 // var nome = "Cleiton";
-//     console.log(nome);
+//  console.log(nome);
 
-//     if(true){
-//         let nome = "José";
-//     }
+//  if(true){
+//     let nome = "José";
+//  }
 
-//     console.log(nome);
+//  console.log(nome);
 
 // Declaração de variáveis (var, let, const):
 // // Usando var
@@ -47,7 +44,7 @@
 // num = "10";
 // console.log(num);
 
-// // String
+// String
 // let str = "Olá, mundo!";
 // console.log(str.charAt(0));
 // console.log(str.indexOf("mundo"));
@@ -65,7 +62,7 @@
 // console.log(elTexto.innerText.indexOf("ipsum"));
 // console.log(elTexto.innerText.lastIndexOf("ipsum"));
 
-// // Array numérico
+// Array numérico
 // let arr1 = [1, 2, 3, 4, 5];
 // let arr2 = [6,7,8,9,10];
 // console.log(arr1);
@@ -101,7 +98,7 @@
 //   console.log(`Indice = ${i} - Valor = ${arr1[i]}` );
 // }
 
-//Imprindo o array com forOf 
+//Imprindo o array com forOf
 // for (const valor of arr1) {
 //   console.log(valor);
 // }
@@ -112,7 +109,7 @@
 //   console.log(array);
 // });
 
-// // Object
+// Object
 // let obj = { nome: "João", idade: 25, devedor: true};
 // console.log(obj);
 // console.table(obj);
@@ -141,15 +138,131 @@
 //INICIAR UM SISTEMA DE VALIDAÇÃO
 
 //Recuperando o botão de submit do Formulário
-const botaoSubmit = document.querySelector("#btnSubmit");
+// const botaoSubmit = document.querySelector("#btnSubmit");
 
-//Adicionar um evento ao botão quando ocorrer.
-botaoSubmit.addEventListener("click", function(e){
-    //Recuperando os campos do formulário para validação!
-    e.preventDefault();  //Evita que o formulário seja enviado
-    const inputEmail = document.querySelector("#idEmail");
-    const inputSenha = document.querySelector("#idSenha");
-    console.log(inputEmail.value)
-    console.log(inputSenha.value)
-})
+// //Adicionar um evento ao botão quando ocorrer.
+// botaoSubmit.addEventListener("click", function(e){
+//     //Recuperando os campos do formulário para validação!
+//     e.preventDefault();  //Evita que o formulário seja enviado
+//     const inputEmail = document.querySelector("#idEmail");
+//     const inputSenha = document.querySelector("#idSenha");
+//     console.log(inputEmail.value)
+//     console.log(inputSenha.value)
+// })
 
+// let usuario = {
+//     nomeCompleto: "Jose das Couves",
+//     emailUsuario: "jo@email.com",
+//     senhaUsuario: "123456"
+// }
+
+let listaUsuario = [
+    {
+      nomeCompleto: "Jose da Silva",
+      emailUsuario: "jo@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Joao Antonio",
+      emailUsuario: "an@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Marco Antonio",
+      emailUsuario: "ma@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Carlos Silva",
+      emailUsuario: "ca@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Luis Claudio",
+      emailUsuario: "lc@email.com",
+      senhaUsuario: "123456",
+    },
+  ];
+  
+  function validar(inputEmail, inputSenha) {
+  
+  //Recuperar elemento de msgStatus
+  let msgStatus = document.querySelector(".valida");
+  
+  for (let x = 0; x < listaUsuario.length; x++) {
+      
+      if ((inputEmail.value == listaUsuario[x].emailUsuario) && (inputSenha.value == listaUsuario[x].senhaUsuario)) {
+        //Redirect
+          msgStatus.setAttribute("class","sucesso");
+          msgStatus.innerText = "Login realizado com sucesso!";
+  
+          //Guardando o objeto validado no localStorage:
+          localStorage.setItem("usuario-logado", JSON.stringify(listaUsuario[x]));
+          
+          setTimeout(function(){
+              msgStatus.setAttribute("class","valida");
+              msgStatus.innerText = "";
+              window.location.href = "../sucesso.html";
+          }, 3000);
+          return false;
+      }
+  }
+      msgStatus.setAttribute("class","erro");
+      msgStatus.innerText = "Login ou senha invalidos!";
+      setTimeout(function(){
+          msgStatus.setAttribute("class","valida");
+          msgStatus.innerText = "";
+          window.location.href = "../erro.html";
+      }, 3000);
+      return false;
+  }
+  
+  //EXERCÍCIOS
+  
+  // Exercício 1 - Variáveis e Hoisting:
+  // Qual será o valor de nome após a execução do código abaixo?
+  // "use strict";
+  // var nome = "Joaquim";
+  // if (true) {
+  //     let nome = "João";
+  // }
+  // console.log(nome);
+  
+  // Exercício 2 - Declaração de Variáveis:
+  // Declare uma variável estrito utilizando let sem atribuir um valor. Imprima o valor de estrito no console.
+  
+  // Exercício 3 - Tipos de Dados:
+  // Qual é o tipo de dado da variável str?
+  // let str = "Olá, mundo!";
+  
+  // Exercício 4 - Mesclar Arrays:
+  // Crie um novo array chamado arrConcatenado que seja a concatenação dos arrays arr1 e arr2 dos exemplos passados. Imprima arrConcatenado no console.
+  
+  // Exercício 5 - Acesso a Propriedades de Objetos:
+  // Acesse a propriedade idade do objeto obj e imprima seu valor no console.
+  // let obj = { nome: "João", idade: 25, devedor: true };
+  
+  // Exercício 6 - Atributo Variável de Objetos:
+  // Atribua a string "São Paulo" à propriedade cidade do objeto obj da questão 5. Imprima o obj no console.
+  
+  // Exercício 7 - Conversão de String para Número:
+  // Converta a string "10" em um número e imprima o resultado no console.
+  
+  // Exercício 8 - Estrutura Condicional com Operadores:
+  // Qual será a saída do código abaixo?
+  // let idade = 20;
+  // let result = (idade >= 18) ? "Maior de idade" : "Menor de idade";
+  // console.log(result);
+  
+  // Exercício 9 - Estrutura Condicional Tradicional:
+  // Qual será a saída do código abaixo?
+  // let age = 20;
+  // if (age >= 18) {
+  //     console.log("Maior de idade");
+  // } else {
+  //     console.log("Menor de idade");
+  // }
+  
+  // Exercício 10 - Mesclar Arrays com Spread:
+  // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 dos exemplospassados e utilizando o operador spread. Imprima arr4 no console.
+  

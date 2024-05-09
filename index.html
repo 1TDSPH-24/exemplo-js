@@ -9,35 +9,12 @@
 
     <script src="./js/script.js" defer></script>
 
-    <!--
-    <script>
-        //Comentário de linha
-         /*
-          Comentário 
-          de
-           várias 
-          linhas 
-        */
-        var nome = "José"; //Declaração de variável com valor
-        let  idade = 25;   //Declaração de variável com valor
-        const altura = 1.70;//Declaração de constante com valor
-        console.log(nome + " tem " +idade+ " anos e mede "+altura+"m.");//Impressão na tela do navegador
-    
-        nome = 100;
-        console.log(`Novo valor da variável ${nome}`);
-    
-    </script> 
-    -->
-
-
-
 </head>
 
 <body>
     
     <header id="topo">
         <h1 id="titulo">JavaScript</h1>
-                       <!-- onmouseover="console.warn('Passei aqui!')"-->
         <nav>
             <ul>
                 <li class="link"><a href="#">JavaScript</a></li>
@@ -47,20 +24,13 @@
         </nav>
     </header> 
 
-    <button id="botao">Testar botão</button>
-
-    <ul class="menu">
-        <li>Item-1</li>
-        <li>Item-2</li>
-        <li>Item-3</li>
-        <li>Item-4</li>
-        <li>Item-5</li>
-    </ul>
-
     <div>
         <h2>VALIDAÇÃO</h2>
         <div>
-            <form action="#" method="get" onsubmit="return false">
+            <span class="valida"></span>
+        </div>
+        <div>
+            <form action="./index.html" method="get" onsubmit="return validar(idEmail,idSenha)">
                 <fieldset>
                     <legend>LOGIN</legend>
                     <div>
@@ -76,21 +46,13 @@
                         <label for="idLembrar">Lembrar-me</label>
                     </div>
                     <div>
-                        <button type="button" id="btnSubmit">Enviar</button>
+                        <button type="submit">Enviar</button>
                     </div>
                 </fieldset>
             </form>
         </div>
-
-
-
-   <!-- <button onclick="console.error('Não é u erro!')">Testar botão</button> -->
-
-<!--
-    <script>
-        alert("Olá Mundo!");/*Função que abre uma janela modal*/
-    </scrip>
--->
+    </div>
+    
     
 </body>                     
 </html>
