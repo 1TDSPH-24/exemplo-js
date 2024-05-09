@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./css/estilo.css">
     <title>JavaScript</title>
 
+    <script src="./js/script.js" defer></script>
+
 </head>
+
 <body>
-    <div class="container">
+    
     <header id="topo">
         <h1 id="titulo">JavaScript</h1>
         <nav>
@@ -19,21 +22,15 @@
                 <li class="link"><a href="#">C#</a></li>
             </ul>
         </nav>
-        <button id="butao">butao</button>
-    </header>
-    <ul class="lista">
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-        <li>item 4</li>
-        <li>item 5</li>
-        <li>item 6</li>
-    </ul>
+    </header> 
 
     <div>
         <h2>VALIDAÇÃO</h2>
         <div>
-            <form action="#" method="post" onsubmit= "return false " >
+            <span class="valida"></span>
+        </div>
+        <div>
+            <form action="./index.html" method="get" onsubmit="return validar(idEmail,idSenha)">
                 <fieldset>
                     <legend>LOGIN</legend>
                     <div>
@@ -49,13 +46,13 @@
                         <label for="idLembrar">Lembrar-me</label>
                     </div>
                     <div>
-                        <button type="submit" id="btnSubmit">Enviar</button>
+                        <button type="submit">Enviar</button>
                     </div>
                 </fieldset>
             </form>
         </div>
     </div>
-       <script src="./js/script.js" defer></script>
-    </div>
+    
+    
 </body>                     
 </html>

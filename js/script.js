@@ -1,34 +1,60 @@
-
-//^w^        :3           ><           >.<          >w<           OwO           UwU
-
-// console.log("Olá Mundo!");
-
-// console.log(document.getElementById("botao").innerHTML);
-
-//Recuperando o botão do HTML e colocando em uma constante.
-// const btnElemento = document.getElementById("botao");
-// //Atrelar ao botão um evento de click.
-// btnElemento.addEventListener("click",function () {
-//     console.log("Botão clicado!");
-// });
-
-//Hoisting
-// var nome = "Cleiton";
-//  console.log(nome);
- 
-//  if(true){
-//     let nome = "José";
-//  }
-
-//  console.log(nome);
-
-
-const botao = document.querySelector("#btnSubmit");
-
-botao.addEventListener("click", function(e){
-    e.preventDefault();
-    const inputEmail = document.querySelector("#idEmail");
-    const inputSenha = document.querySelector("#idSenha");
-    console.log(inputEmail.value)
-    console.log(inputSenha.value)
-})
+let listaUsuario = [
+    {
+      nomeCompleto: "Jose da Silva",
+      emailUsuario: "jo@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Joao Antonio",
+      emailUsuario: "an@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Marco Antonio",
+      emailUsuario: "ma@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Carlos Silva",
+      emailUsuario: "ca@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Luis Claudio",
+      emailUsuario: "lc@email.com",
+      senhaUsuario: "123456",
+    },
+  ];
+  
+  function validar(inputEmail, inputSenha) {
+  
+  //Recuperar elemento de msgStatus
+  let msgStatus = document.querySelector(".valida");
+  
+  for (let x = 0; x < listaUsuario.length; x++) {
+      
+      if ((inputEmail.value == listaUsuario[x].emailUsuario) && (inputSenha.value == listaUsuario[x].senhaUsuario)) {
+        //Redirect
+          msgStatus.setAttribute("class","sucesso");
+          msgStatus.innerText = "Login realizado com sucesso!";
+  
+          //Guardando o objeto validado no localStorage:
+          localStorage.setItem("usuario-logado", JSON.stringify(listaUsuario[x]));
+          
+          setTimeout(function(){
+              msgStatus.setAttribute("class","valida");
+              msgStatus.innerText = "";
+              window.location.href = "../sucesso.html";
+          }, 3000);
+          return false;
+      }
+  }
+      msgStatus.setAttribute("class","erro");
+      msgStatus.innerText = "Login ou senha invalidos!";
+      setTimeout(function(){
+          msgStatus.setAttribute("class","valida");
+          msgStatus.innerText = "";
+          window.location.href = "../erro.html";
+      }, 3000);
+      return false;
+  }
