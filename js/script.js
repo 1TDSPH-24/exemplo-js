@@ -10,11 +10,11 @@
 // });
 
 //Hoisting
-// var nome = "Cleiton";
+// var nome = "Caio";
 //  console.log(nome);
- 
+
 //  if(true){
-//     let nome = "José";
+//     let nome = "Felipe";
 //  }
 
 //  console.log(nome);
@@ -75,7 +75,7 @@
 // console.log(arr4);
 
 // // Array de strings
-// let arr5 = ["João", "Maria", "José"];
+// let arr5 = ["Caio", "Gabriel", "Matheus"];
 // console.log(arr5);
 // console.table(arr5);
 
@@ -98,7 +98,7 @@
 //   console.log(`Indice = ${i} - Valor = ${arr1[i]}` );
 // }
 
-//Imprindo o array com forOf 
+//Imprindo o array com forOf
 // for (const valor of arr1) {
 //   console.log(valor);
 // }
@@ -110,7 +110,7 @@
 // });
 
 // Object
-// let obj = { nome: "João", idade: 25, devedor: true};
+// let obj = { nome: "Caio", idade: 18, devedor: true};
 // console.log(obj);
 // console.table(obj);
 // console.log(obj.nome);
@@ -125,7 +125,7 @@
 // console.log(obj);
 
 // //DESTRUCTURING
-// const pessoa = {nome2 : 'Maria', idade2: 34, cidade: 'Florianópolis'};
+// const pessoa = {nome2 : 'Felipe', idade2: 17, cidade: 'SP'};
 
 // const {nome2, idade2, cidade} = pessoa;
 // console.log(nome2);
@@ -150,31 +150,69 @@
 //     console.log(inputSenha.value)
 // })
 
+// let usuario = {
+//     nomeCompleto: "Caio Carnetti",
+//     emailUsuario: "caio@email.com",
+//     senhaUsuario: "123456"
+// }
 
-function tradicional(){
+let listaUsuario = [
+    {
+      nomeCompleto: "Caio Carnetti",
+      emailUsuario: "caio@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Felipe Garcia",
+      emailUsuario: "felipe@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Gabriel Falanga",
+      emailUsuario: "gabriel@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Matheus Esteves",
+      emailUsuario: "matheus@email.com",
+      senhaUsuario: "123456",
+    },
+    {
+      nomeCompleto: "Carlos Eduardo",
+      emailUsuario: "cadu@email.com",
+      senhaUsuario: "123456",
+    },
+  ];
+  
+  function validar(inputEmail, inputSenha) {
 
-    // if((a+b)>10){
-    //     alert('Validado');
-    //     return true;
-    // }else{
-    //     alert('Inválido');
-    //     return false;
-    // }
-
-    //Pegando o elemento INPUT
-    //Pessoa pessoa = mew Pessoa();
-    const inputEmail = document.getElementById("idEmail").value;
-    console.log(inputEmail);
-
-    const inputSenha = document.getElementById("idSenha").value;
-    console.log(inputSenha);
-
-    if(inputEmail == "caio@email.com" && inputSenha == "123456"){
-        //Redirect
-        window.location.href = "../sucesso.html"
-    }else{
-        window.location.href = "../erro.html"
+    //Recuperar elemento de msgStatus
+    let msgStatus = document.querySelector(".valida");
+    
+    for (let x = 0; x < listaUsuario.length; x++) {
+        
+        if ((inputEmail.value == listaUsuario[x].emailUsuario) && (inputSenha.value == listaUsuario[x].senhaUsuario)) {
+          //Redirect
+            msgStatus.setAttribute("class","sucesso");
+            msgStatus.innerText = "Login realizado com sucesso!";
+    
+            //Guardando o objeto validado no localStorage:
+            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuario[x]));
+            
+            setTimeout(function(){
+                msgStatus.setAttribute("class","valida");
+                msgStatus.innerText = "";
+                window.location.href = "../sucesso.html";
+            }, 3000);
+            return false;
+        }
     }
-
-   
-}
+        msgStatus.setAttribute("class","erro");
+        msgStatus.innerText = "Login ou senha invalidos!";
+        setTimeout(function(){
+            msgStatus.setAttribute("class","valida");
+            msgStatus.innerText = "";
+            window.location.href = "../erro.html";
+        }, 3000);
+        return false;
+    }
