@@ -152,35 +152,15 @@
 // })
 
 
-function validar(){
+function validar(inputEmail,inputSenha){
 
-    // if((a+b)>10){
-    //     alert('Validado');
-    //     return true;
-    // }else{
-    //     alert('Inválido');
-    //     return false;
-    // }
+    // const inputEmail = document.getElementById("idEmail").value;
+    console.log(inputEmail.value);
 
-    //Pegando o elemento INPUT
-    //Pessoa pessoa = mew Pessoa();
-    
-    // const inputLabel = document.querySelector("label[for=idEmail");
+    // const inputSenha = document.getElementById("idSenha").value;
+    console.log(inputSenha.value);
 
-    // //Adicionar dados no innerText
-    // // inputLabel.innerText = '<p>Digite seu Email</p>';
-    // inputLabel.innerHTML = '<p>Digite seu Email</p>';
-
-    // console.log("INNER HTML : " + inputLabel.innerHTML);
-    // console.log("INNER TEXT : " + inputLabel.innerText);
-
-    const inputEmail = document.getElementById("idEmail").value;
-    console.log(inputEmail);
-
-    const inputSenha = document.getElementById("idSenha").value;
-    console.log(inputSenha);
-
-    if(inputEmail == "ale@email.com" && inputSenha == "123456"){
+    if(inputEmail.value == "ale@email.com" && inputSenha.value == "123456"){
         //Redirect
         window.location.href = "../sucesso.html";
     }else{
