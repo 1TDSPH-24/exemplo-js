@@ -217,6 +217,20 @@ for (let x = 0; x < listaUsuario.length; x++) {
     return false;
 }
 
+let inputCpf = document.querySelector("#idCpf");
+inputCpf.addEventListener("input", ()=>{
+    let cpf = inputCpf.value;
+
+    //Removendo os caractéres indesejados com regex:
+    cpf = cpf.replace(/\D/g, "");
+    //Aplicando a mascara ao CPF e adicionando pontos e traço nos lugares corretos.
+    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+    cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+    cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+
+    inputCpf.value = cpf;
+});
+
 //EXERCÍCIOS
 
 // Exercício 1 - Variáveis e Hoisting:

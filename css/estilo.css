@@ -32,4 +32,14 @@
     border: 2px solid #ff0000;
   }
 
+  input[type=text]:valid{
+    border: 2px solid #7be87b;
+    outline: none;
+  }
+
+  input[type=text]:invalid{
+    border: 2px solid #eb0909;
+    outline: none;
+  }
+
   
