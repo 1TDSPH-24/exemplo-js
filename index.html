@@ -35,11 +35,15 @@
                     <legend>LOGIN</legend>
                     <div>
                         <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" minlength="8" oninvalid="this.setCustomValidity('Caractéres insuficientes!')" required>
                     </div>
                     <div>
                         <label for="idSenha">Senha</label>
-                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha" minlength="6" maxlength="8" pattern="[A-Za-z0-9]{8}" oninvalid="this.setCustomValidity('A senha não pode conter caractéres especiais (@#%+-_) e deve conter entre 6 e 8 caractéres!')" required>
+                    </div>
+                    <div>
+                        <label for="idCpf">CPF</label>
+                        <input type="text" name="txtCpf" id="idCpf" placeholder="Digite seu CPF" pattern="\d{3}\. \d{3}\. \d{3}\- \d{2}" oninvalid="this.setCustomValidity('Este campo deve conter 9 digitos e só aceita números!')" required minlength="14" maxlength="14">
                     </div>
                     <div>
                         <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
