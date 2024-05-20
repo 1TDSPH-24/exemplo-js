@@ -15,7 +15,7 @@
     
 
     <div>
-        <h2>VALIDAÇÃO</h2>
+        <h2 id="title">VALIDAÇÃO</h2>
         <div>
             <span class="valida"></span>
         </div>
@@ -23,6 +23,7 @@
             <form action="./index.html" method="get" onsubmit="return validar(idEmail,idSenha)">
                 <fieldset>
                     <legend>LOGIN</legend>
+                    <div class="form-group">
                     <div>
                         <label for="idEmail">Email</label>
                         <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" minlength="8" oninvalid="this.setCustomValidity('Caractéres insuficientes!')" required>
@@ -41,6 +42,7 @@
                     </div>
                     <div>
                         <button type="submit">Enviar</button>
+                    </div>
                     </div>
                 </fieldset>
             </form>
