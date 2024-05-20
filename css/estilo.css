@@ -1,8 +1,8 @@
 *{
-<<<<<<< HEAD
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 
@@ -32,49 +32,76 @@
   text-align: center;
   border: 2px solid #ff0000;
 }
-=======
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
+/* input[type=text]:valid{
+  border: 2px solid #7be87b;
+  outline: none;
+}
+
+input[type=text]:invalid{
+  border: 2px solid #eb0909;
+  outline: none;
+} */
+
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.form-group > div{
+  margin: 3% auto; 
+}
+
+.form-group input[type=email], input[type=password], input[type=text]{
+  display: block;
+  width: 50vw;
+  height: 10vh;
+  border-radius: 5px;
+  padding-left: 1opx;
+  border: none;
+  box-shadow: inset 0 0 10px rgba(0,0,0, .8);
+  outline-color: rgb(192, 188, 188);
+}
+.form-group button[type=submit]{
+  display: block;
+  width: 25vw;
+  height: 5vh;
+  border-radius: 5px;
+  padding-left: 1opx;
+  background-color: rgb(12, 12, 202);
+  color: white;
+  font-weight: bold;
+  box-shadow: inset 0 0 10px rgba(0,0,0, .8);
+  outline-color: rgb(192, 188, 188);
+  border: 2px solid #fff;
+  transition: all .4s ease-in;
+}
+.form-group button[type=submit]:hover{
+
+  box-shadow: inset 0 0 10px rgba(255,255,255, .8);
+}
+
+body{
+  background-image: url(../img/back-login-640x423.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#btnClose{
+  display: block;
+  border-radius: 100%;
+  width: 2vw;
+  background-color: red;
+}
+
+dialog::backdrop{
+  width: 100%;
+  background-color: rgba(0,0,0, .8);
+  margin: 0 auto;
+}
   
 
-  #seletor-id{
-    color: black;
-  }
-
-  .seletor-class{
-    color: black;
-  }
-
-
-  .sucesso{
-    color: #0a840a;
-    font-weight: 500;
-    font-size: 1.5rem;
-    background-color: #7be87b;
-    text-align: center;
-    border: 2px solid #0a840a;
-  }
-
-  .erro{
-    color: #ff0000;
-    font-weight: 500;
-    font-size: 1.5rem;
-    background-color: #fb9898;
-    text-align: center;
-    border: 2px solid #ff0000;
-  }
-
-  input[type=text]:valid{
-    border: 2px solid #7be87b;
-    outline: none;
-  }
-
-  input[type=text]:invalid{
-    border: 2px solid #eb0909;
-    outline: none;
-  }
-
-  
->>>>>>> bd81d0d304e3353aa024e3995de348d77dcd3ed8
