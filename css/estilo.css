@@ -1,6 +1,7 @@
 *{
-  margin: 0;
+  margin: 10;
   padding: 0;
+  color:rgb(255, 255, 255);
   box-sizing: border-box;
 }
 
@@ -37,8 +38,52 @@ input[type=text]:valid{
   outline: none;
 }
 
-input[type=text]:invalid{
-  border: 2px solid #eb0909;
-  outline: none;
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.form-group > div{
+  margin: 3% auto; 
+}
+
+.form-group input[type=email],input[type=password],input[type=text]{
+  display: block;
+  width: 50vw;
+  height: 10vh;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: none;
+  box-shadow: inset 0 0 10px rgba(0,0,0, .8);
+  outline-color:rgba(66, 65, 65, 65);
+}
+
+.form-group button[type=submit]{
+  display: block;
+  width: 20vw;
+  height: 10vh;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: #1d2e7a;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  box-shadow: inset 0 0 10px rgba(0,0,0, .8);
+  outline-color: #ffffff;
+  transition: all .4s ease-in;
+
+}
+
+.form-group button[type=submit]:hover{
+  box-shadow: inset 0 0 10px rgba(255,255,255, .8);
+}
+
+body {
+  background-image: url(../img/back-login-640x423.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
