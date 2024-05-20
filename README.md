@@ -13,3 +13,8 @@ em protótipos, [tipagem fraca], [dinâmica] e [funções de primeira classe].
 comumente indisponíveis em linguagens populares como [Java] e [C++].
 - É a linguagem de programação mais utilizada do mundo atualmente...
 
+# O que foi feito:
+
+- Criação de Formulário de Login
+- Persistência de dados nos campos do Form [HTML].
+- Validação dos dados do usuários através de [JavaScript].
