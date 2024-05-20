@@ -81,9 +81,24 @@ input[type=text]:valid{
   box-shadow: inset 0 0 10px rgba(255,255,255, .8);
 }
 
+.form-group label{
+  color: #4e4f55;
+}
 body {
   background-image: url(../img/back-login-640x423.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+#btnClose{
+  display: block;
+  border-radius: 20%;
+  width: 2vw;
+  background-color: #1d2e7a;
+}
+
+#btnLogin{
+  width: 10vw;
+  height: 5vh;
+  background-color: #1d2e7a;
+}

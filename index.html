@@ -14,12 +14,16 @@
 <body>
     
 
-    <div>
         <h2 id="title">VALIDAÇÃO</h2>
+
+        <button id="btnLogin">LOGIN</button>
+
+        <dialog>
         <div>
             <span class="valida"></span>
         </div>
         <div>
+            <button id="btnClose">X</button>
             <form action="./index.html" method="get" onsubmit="return validar(idEmail,idSenha)">
                 <fieldset>
                     <legend>LOGIN</legend>
@@ -47,7 +51,8 @@
                 </fieldset>
             </form>
         </div>
-    </div>
+        </dialog>
+
     
     
 </body>                     
