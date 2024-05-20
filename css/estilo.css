@@ -91,3 +91,14 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#btnClose{
+  display: block;
+  border-radius: 100%;
+  width: 3vw;
+}
+
+dialog::backdrop{
+  width: 100%;
+  background-color: rgba(0,0,0, .8);
+}
