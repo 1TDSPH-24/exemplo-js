@@ -280,3 +280,18 @@ let listaUsuario = [
   // Exercício 10 - Mesclar Arrays com Spread:
   // Crie um novo array chamado arr4 que seja a concatenação dos arrays arr1 e arr2 dos exemplospassados e utilizando o operador spread. Imprima arr4 no console.
   
+  // Recuperando o botão login:
+  const botaoLogin = document.querySelector("#btnLogin");
+  // Recuperando o elemento dialog:
+  const modal = document.querySelector("dialog");
+  botaoLogin.addEventListener("click", (e)=>{
+    // Abrindo o dialog
+    modal.showModal();
+  })
+  // Recuperando o botão Close:
+  const botaoFechar = document.querySelector("#btnClose");
+  // Recuperando o elemento dialog:
+  botaoFechar.addEventListener("click", (e)=>{
+    // Fechando o dialog
+    modal.close();
+  })
