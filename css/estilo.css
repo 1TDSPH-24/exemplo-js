@@ -90,3 +90,23 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  #btnClose{
+    display: block;
+    border-radius: 100%;
+    width: 4.8vw;
+    height: 10vh;
+    text-align: center;
+    color: #1b35b4;
+    font-weight: bold;
+    font-size: larger;
+    float: right;
+  }
+
+  dialog::backdrop{
+    background-color: rgba(0,0,0, .5) !important;
+  }
+
+  dialog{
+    margin: 0 auto;
+  }
