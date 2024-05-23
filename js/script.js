@@ -230,3 +230,20 @@ inputCpf.addEventListener("input", ()=>{
 
     inputCpf.value = cpf;
 });
+
+const botaoLogin = document.querySelector("#btnLogin");
+
+const modal = document.querySelector("dialog");
+
+botaoLogin.addEventListener("click", (e)=>{
+
+  modal.show();
+})
+
+
+const botaoClose = document.querySelector("#btnClose");
+
+botaoClose.addEventListener("click", (e)=>{
+
+  modal.close();
+})
