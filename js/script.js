@@ -247,3 +247,15 @@ botaoClose.addEventListener("click", (e)=>{
 
   modal.close();
 })
+
+let relogio = document.querySelector("#relogio");
+
+relogio.style.margin = "50px";
+
+function tempo(relogio) {
+  let hora = new Date();
+  relogio.innerHTML = (hora.toLocaleDateString()).slice(-8);
+}
+
+let ponto = setInterval(tempo,1000);
+
