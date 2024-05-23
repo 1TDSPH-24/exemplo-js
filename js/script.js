@@ -10,11 +10,11 @@
 // });
 
 //Hoisting
-// var nome = "Caio";
+// var nome = "Cleiton";
 //  console.log(nome);
 
 //  if(true){
-//     let nome = "Felipe";
+//     let nome = "José";
 //  }
 
 //  console.log(nome);
@@ -75,7 +75,7 @@
 // console.log(arr4);
 
 // // Array de strings
-// let arr5 = ["Caio", "Gabriel", "Matheus"];
+// let arr5 = ["João", "Maria", "José"];
 // console.log(arr5);
 // console.table(arr5);
 
@@ -110,7 +110,7 @@
 // });
 
 // Object
-// let obj = { nome: "Caio", idade: 18, devedor: true};
+// let obj = { nome: "João", idade: 25, devedor: true};
 // console.log(obj);
 // console.table(obj);
 // console.log(obj.nome);
@@ -125,7 +125,7 @@
 // console.log(obj);
 
 // //DESTRUCTURING
-// const pessoa = {nome2 : 'Felipe', idade2: 17, cidade: 'SP'};
+// const pessoa = {nome2 : 'Maria', idade2: 34, cidade: 'Florianópolis'};
 
 // const {nome2, idade2, cidade} = pessoa;
 // console.log(nome2);
@@ -151,79 +151,79 @@
 // })
 
 // let usuario = {
-//     nomeCompleto: "Caio Carnetti",
-//     emailUsuario: "caio@email.com",
+//     nomeCompleto: "Jose das Couves",
+//     emailUsuario: "jo@email.com",
 //     senhaUsuario: "123456"
 // }
 
 let listaUsuario = [
-    {
-      nomeCompleto: "Caio Carnetti",
-      emailUsuario: "caio@email.com",
-      senhaUsuario: "123456",
-    },
-    {
-      nomeCompleto: "Felipe Garcia",
-      emailUsuario: "felipe@email.com",
-      senhaUsuario: "123456",
-    },
-    {
-      nomeCompleto: "Gabriel Falanga",
-      emailUsuario: "gabriel@email.com",
-      senhaUsuario: "123456",
-    },
-    {
-      nomeCompleto: "Matheus Esteves",
-      emailUsuario: "matheus@email.com",
-      senhaUsuario: "123456",
-    },
-    {
-      nomeCompleto: "Carlos Eduardo",
-      emailUsuario: "cadu@email.com",
-      senhaUsuario: "123456",
-    },
-  ];
-  
-  function validar(inputEmail, inputSenha) {
+  {
+    nomeCompleto: "Felipe Garcia",
+    emailUsuario: "felipe@email.com",
+    senhaUsuario: "123456",
+  },
+  {
+    nomeCompleto: "Carlos Eduardo",
+    emailUsuario: "cadu@email.com",
+    senhaUsuario: "123456",
+  },
+  {
+    nomeCompleto: "Matheus Esteves",
+    emailUsuario: "matheus@email.com",
+    senhaUsuario: "123456",
+  },
+  {
+    nomeCompleto: "Gabriel Falanga",
+    emailUsuario: "gabriel@email.com",
+    senhaUsuario: "123456",
+  },
+  {
+    nomeCompleto: "Caio Henrique",
+    emailUsuario: "caio@email.com",
+    senhaUsuario: "123456",
+  },
+];
 
-    //Recuperar elemento de msgStatus
-    let msgStatus = document.querySelector(".valida");
+function validar(inputEmail, inputSenha) {
+
+//Recuperar elemento de msgStatus
+let msgStatus = document.querySelector(".valida");
+
+for (let x = 0; x < listaUsuario.length; x++) {
     
-    for (let x = 0; x < listaUsuario.length; x++) {
+    if ((inputEmail.value == listaUsuario[x].emailUsuario) && (inputSenha.value == listaUsuario[x].senhaUsuario)) {
+      //Redirect
+        msgStatus.setAttribute("class","sucesso");
+        msgStatus.innerText = "Login realizado com sucesso!";
+
+        //Guardando o objeto validado no localStorage:
+        localStorage.setItem("usuario-logado", JSON.stringify(listaUsuario[x]));
         
-        if ((inputEmail.value == listaUsuario[x].emailUsuario) && (inputSenha.value == listaUsuario[x].senhaUsuario)) {
-          //Redirect
-            msgStatus.setAttribute("class","sucesso");
-            msgStatus.innerText = "Login realizado com sucesso!";
-    
-            //Guardando o objeto validado no localStorage:
-            localStorage.setItem("usuario-logado", JSON.stringify(listaUsuario[x]));
-            
-            setTimeout(function(){
-                msgStatus.setAttribute("class","valida");
-                msgStatus.innerText = "";
-                window.location.href = "../sucesso.html";
-            }, 3000);
-            return false;
-        }
-    }
-        msgStatus.setAttribute("class","erro");
-        msgStatus.innerText = "Login ou senha invalidos!";
         setTimeout(function(){
             msgStatus.setAttribute("class","valida");
             msgStatus.innerText = "";
-            window.location.href = "../erro.html";
+            window.location.href = "../sucesso.html";
         }, 3000);
         return false;
     }
+}
+    msgStatus.setAttribute("class","erro");
+    msgStatus.innerText = "Login ou senha invalidos!";
+    setTimeout(function(){
+        msgStatus.setAttribute("class","valida");
+        msgStatus.innerText = "";
+        window.location.href = "../erro.html";
+    }, 3000);
+    return false;
+}
 
-    let inputCpf = document.querySelector("#idCpf");
+let inputCpf = document.querySelector("#idCpf");
 inputCpf.addEventListener("input", ()=>{
     let cpf = inputCpf.value;
 
-    //Removendo os caractéres indesejados com regex:
+
     cpf = cpf.replace(/\D/g, "");
-    //Aplicando a mascara ao CPF e adicionando pontos e traço nos lugares corretos.
+    
     cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
     cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
     cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
@@ -236,7 +236,7 @@ const botaoLogin = document.querySelector("#btnLogin");
 const modal = document.querySelector("dialog");
 
 botaoLogin.addEventListener("click", (e)=>{
-
+;
   modal.show();
 })
 

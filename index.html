@@ -50,8 +50,9 @@
                   placeholder="Digite sua senha"
                   minlength="6"
                   maxlength="8"
-                  pattern="[A-Za-z0-9]{8}"
-                  oninvalid="this.setCustomValidity('Este campo não aceita caractéres especiais - * % # $!')"
+                  pattern="[A-Za-z0-9]{6,8}"
+                  oninvalid="this.setCustomValidity('Este campo não aceita caracteres especiais - * % # $!')"
+                  oninput="this.setCustomValidity('')"
                   required
                 />
               </div>
