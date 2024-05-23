@@ -288,7 +288,7 @@ const modal = document.querySelector("dialog");
 botaoLogin.addEventListener("click", (e)=>{
   //Abrindo o dialog:
   // modal.showModal();
-  modal.show();
+  modal.showModal();
 })
 
 //Recuperando o botao close:

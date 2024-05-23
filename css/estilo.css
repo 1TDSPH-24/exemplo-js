@@ -41,35 +41,40 @@
     border: 2px solid #eb0909;
     outline: none;
   } */
-
+form{
+  font-size: 1.5rem;
+}
 
   .form-group{
     display: flex;
     flex-direction: column;
     width: 50vw;
-    height: 70vh;
+    height: 60vh;
     margin: 0 auto;
   }
 
   .form-group > div{
-    margin: 3% auto; 
+    margin: 1% auto; 
   }
 
   .form-group input[type=email],input[type=password],input[type=text]{
     display: block;
-    width: 50vw;
-    height: 10vh;
+    width: 40vw;
+    height: 8vh;
     border-radius: 5px;
     padding-left: 10px;
     border: none;
     box-shadow: inset 0 0 10px rgba(0,0,0, .8);
     outline-color: #e8ebe8;
+    margin: 1% auto;
+    color: #000000;
+    font-size: 1.5rem;
   }
 
   .form-group button[type=submit]{
     display: block;
-    width: 25vw;
-    height: 10vh;
+    width: 20vw;
+    height: 7vh;
     border-radius: 5px;
     padding-left: 10px;
     background-color: #1b35b4;
@@ -79,23 +84,18 @@
     outline-color: #e8ebe8;
     border: 2px solid #fff;
     transition: all .4s ease-in;
+    font-size: 2rem;
   }
 
   .form-group button[type=submit]:hover{
    box-shadow: inset 0 0 10px rgba(255,255,255, .8);
   }
 
-  body{
-    background-image: url("../img/back-login-640×423.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
   #btnClose{
     display: block;
     border-radius: 100%;
-    width: 4.8vw;
-    height: 10vh;
+    width: 30px;
+    height: 30px;
     text-align: center;
     color: #1b35b4;
     font-weight: bold;
@@ -105,8 +105,15 @@
 
   dialog::backdrop{
     background-color: rgba(0,0,0, .5) !important;
+    
   }
 
   dialog{
-    margin: 0 auto;
+    margin: 5% auto;
+    background-image: url("../img/back-login-640×423.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    border-radius: 5px;
+
   }
