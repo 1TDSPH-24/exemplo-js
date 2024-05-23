@@ -298,3 +298,24 @@ botaoClose.addEventListener("click", (e)=>{
   //Fechando o dialog:
   modal.close();
 })
+
+function tempo() {
+  let relogio = document.querySelector("#relogio");
+  relogio.style.margin = "50px";
+  let hora = new Date();
+  relogio.innerHTML = (hora.toLocaleString()).slice(-8);
+}
+
+let ponto;
+const botaoLiga = document.querySelector("#btnLiga");
+const botaoDesliga = document.querySelector("#btnDesliga");
+
+botaoLiga.addEventListener("click", (e)=>{
+   ponto = setInterval(tempo,1000);  
+});
+
+botaoDesliga.addEventListener("click", (e)=>{
+  clearInterval(ponto);
+});
+
+
