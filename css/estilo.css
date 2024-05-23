@@ -110,3 +110,7 @@
   dialog{
     margin: 0 auto;
   }
+
+  body h2 {
+    color: #e8ebe8;
+  }
