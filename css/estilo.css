@@ -7,10 +7,11 @@
   .container{
     width: 100%;
     height: 100%;
+    display: flex;
   }
   #topo{
     margin: 50px;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     background-color: aquamarine;

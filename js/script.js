@@ -2,7 +2,7 @@ let listaUsuario = [
     {
       nomeCompleto: "Jose da Silva",
       emailUsuario: "jo@email.com",
-      senhaUsuario: "123456",
+      senhaUsuario: "12345678",
     },
     {
       nomeCompleto: "Joao Antonio",
