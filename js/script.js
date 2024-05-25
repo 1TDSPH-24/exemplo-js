@@ -1,4 +1,11 @@
 
+
+function validar(inputEmail, inputSenha) {
+
+//Recuperar elemento de msgStatus
+let msgStatus = document.querySelector(".valida");
+
+
 let listaUsuario = [
   {
     nomeCompleto: "Jose da Silva",
@@ -32,6 +39,7 @@ function validar(inputEmail, inputSenha) {
 //Recuperar elemento de msgStatus
 let msgStatus = document.querySelector(".valida");
 
+
 for (let x = 0; x < listaUsuario.length; x++) {
     
     if ((inputEmail.value == listaUsuario[x].emailUsuario) && (inputSenha.value == listaUsuario[x].senhaUsuario)) {
@@ -64,6 +72,7 @@ let inputCpf = document.querySelector("#idCpf");
 inputCpf.addEventListener("input", ()=>{
     let cpf = inputCpf.value;
 
+
     //Removendo os caractéres indesejados com regex:
     cpf = cpf.replace(/\D/g, "");
     //Aplicando a mascara ao CPF e adicionando pontos e traço nos lugares corretos.
@@ -75,15 +84,49 @@ inputCpf.addEventListener("input", ()=>{
 });
 
 
-//Recuperando o botao login:
 const botaoLogin = document.querySelector("#btnLogin");
 //Recuperando o elemento dialog:
 const modal = document.querySelector("dialog");
 //Atrelando um evento de click ao botao login:
 botaoLogin.addEventListener("click", (e)=>{
+
   modal.show();
 })
 const botaoClose = document.querySelector("#btnClose");
 botaoClose.addEventListener("click", (e)=>{
   modal.close();
 })
+  //Abrindo o dialog:
+  // modal.showModal();
+  modal.showModal();
+}
+
+//Recuperando o botao close:
+const botaoClose = document.querySelector("#btnClose");
+//Atrelando um evento de click ao botao login:
+botaoClose.addEventListener("click", (e)=>{
+  //Fechando o dialog:
+  modal.close();
+})
+
+function tempo() {
+  let relogio = document.querySelector("#relogio");
+  relogio.style.margin = "50px";
+  let hora = new Date();
+  relogio.innerHTML = (hora.toLocaleString()).slice(-8);
+}
+
+let ponto;
+const botaoLiga = document.querySelector("#btnLiga");
+const botaoDesliga = document.querySelector("#btnDesliga");
+
+botaoLiga.addEventListener("click", (e)=>{
+   ponto = setInterval(tempo,1000);  
+});
+
+botaoDesliga.addEventListener("click", (e)=>{
+  clearInterval(ponto);
+});
+
+
+

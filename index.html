@@ -12,42 +12,84 @@
   <body>
     
       <h2>VALIDAÇÃO</h2>
+      
+      <div class="botoes">
+        <button id="btnLogin">LOGIN</button>
+        <button id="btnLiga">LIGA</button>
+        <button id="btnDesliga">DESLIGA</button>
+      </div>
+      
+      <div id="relogio"></div>
 
-      <button id="btnLogin">LOGIN</button>
 
-    <div>
-        <h2>VALIDAÇÃO</h2>
-        <div>
-            <span class="valida"></span>
-        </div>
-        <div>
-            <form action="./index.html" method="get" onsubmit="return validar(idEmail,idSenha)">
-                <fieldset>
-                    <legend>LOGIN</legend>
-                    <div>
-                        <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" minlength="8" oninvalid="this.setCustomValidity('caracteres insuficientes')">
-                    </div>
-                    <div>
-                        <label for="idSenha">Senha</label>
-                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite seu senha" minlength="8" pattern="[A-Za-z0-9]{8}">
-                    </div>
-                    <div>
-                        <label for="idCPF">CPF</label>
-                        <input type="password" name="txtCPF" id="idCPF" placeholder="Digite sua CPF" minlength="8" pattern="[0-9]{11}">
-                    </div>
-                    <div>
-                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
-                        <label for="idLembrar">Lembrar-me</label>
-                    </div>
-                    <div>
-                        <button type="submit">Enviar</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
-    
-    
-</body>                     
+      <dialog>
+      <div>
+        <span class="valida"></span>
+      </div>
+      <div>
+        <button id="btnClose"> X </button>
+        <form
+          action="./index.html"
+          method="get"
+          onsubmit="return validar(idEmail,idSenha)"
+        >
+          <fieldset>
+            <legend>LOGIN</legend>
+            <div class="form-group">
+              <div>
+                <label for="idEmail">Email</label>
+                <input
+                  type="email"
+                  name="txtEmail"
+                  id="idEmail"
+                  placeholder="Digite seu email"
+                  minlength="8"
+                  oninvalid="this.setCustomValidity('Caractéres insuficientes!')"
+                  required
+                />
+              </div>
+              <div>
+                <label for="idSenha">Senha</label>
+                <input
+                  type="password"
+                  name="txtSenha"
+                  id="idSenha"
+                  placeholder="Digite sua senha"
+                  
+                />
+              </div>
+              <div>
+                <label for="idCpf">CPF</label>
+                <input
+                  type="text"
+                  name="txtCpf"
+                  id="idCpf"
+                  placeholder="Digite seu CPF"
+                  oninvalid="this.setCustomValidity('Este campo possui 9 digitos e só aceita números.')"
+                  pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"
+                  required
+                  minlength="14"
+                  maxlength="14"
+                />
+              </div>
+              <div>
+                <input
+                  type="checkbox"
+                  name="txtLembrar"
+                  id="idLembrar"
+                  value="lembrete"
+                  checked
+                />
+                <label for="idLembrar">Lembrar-me</label>
+              </div>
+              <div>
+                <button type="submit">Enviar</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </dialog>
+
+  </body>
 </html>
